@@ -1,4 +1,4 @@
-// Nombre e idade do usuario
+// Nome e idade do usuario
 let nome = 'María'
 let idade = 25
 
