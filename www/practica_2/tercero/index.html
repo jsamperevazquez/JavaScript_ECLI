@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="gl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Texto sen Vocais</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Desfagámonos das vocais!!! 🅰️🔼🗼</h1>
+        <label for="texto">Introduce o texto:</label>
+        <input type="text" id="texto" step="0.01" min="0" max="20">
+        <div class="button_container">    
+            <button onclick="eliminarVocaisWhile()">While</button>
+            <button onclick="eliminarVocaisDoWhile()">Do While</button>
+            <button onclick="eliminarVocaisFor()">For</button>
+        </div>
+        <div id="resultado"></div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
