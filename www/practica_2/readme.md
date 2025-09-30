@@ -51,5 +51,10 @@ O pseudocódigo para o algortimo debería ser algo semellante ao seguinte:
 
 Implemente unha función chamada bisesto que determine se un ano é bisesto. Lembra que:
 
-Un ano é bisesto se é divisible entre 4.
-Non obstante, non é bisesto se é divisible entre 100, a menos que tamén sexa divisible entre 400. A función debe recibir un número enteiro positivo correspondente ao ano e devolver true se o ano é bisesto e false en caso contrario.
+-  Un ano é bisesto se é divisible entre 4.
+-  Non obstante, non é bisesto se é divisible entre 100, a menos que tamén sexa divisible entre 400.
+-  A función debe recibir un número enteiro positivo correspondente ao ano e devolver true se o ano é bisesto e false en caso contrario.
+
+## Exercicio 5 - Listado de anos bisiestos
+
+Implementa a función para devolver un array co listado de anos bisiestos a partires da función implementada no exercio anterior. Emprega o código proporcionado para este exercicio. A función nova a implementar toma dous anos como entrada ( ano de inicio e ano de fin) e devolve un array con todos os anos bisiestos nese intervalo.
