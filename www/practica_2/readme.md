@@ -46,3 +46,10 @@ Recorda que só debes completar o código nas zonas que se mostra cun //TODO: Re
 O pseudocódigo para o algortimo debería ser algo semellante ao seguinte:
 
 ![Exerc 3 image](https://github.com/jsamperevazquez/JavaScript_ECLI/blob/main/www/media/exerc_3.png)
+
+## Exercicio 4 - Bisiesto.
+
+Implemente unha función chamada bisesto que determine se un ano é bisesto. Lembra que:
+
+Un ano é bisesto se é divisible entre 4.
+Non obstante, non é bisesto se é divisible entre 100, a menos que tamén sexa divisible entre 400. A función debe recibir un número enteiro positivo correspondente ao ano e devolver true se o ano é bisesto e false en caso contrario.
