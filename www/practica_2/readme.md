@@ -88,3 +88,12 @@ function buscarMultiplosComunes(mcm, inicio, fin) {
 ~~~ 
 O pseudo código para calcular o MCM é o seguinte:  
 ![Exercicio 6 foto](https://github.com/jsamperevazquez/JavaScript_ECLI/blob/main/www/media/exerc_6.png)
+
+O pseudo código para calcular **buscarMultiplosComunes** é:
+O algoritmo inicializa a lista resultado baleira.
+Itera sobre os valores no rango de inicio a fin.
+En cada iteración, comproba se i é divisible por mcm e, se é, engádeo á lista.
+Ao final, retorna a lista resultado.
+
+
+
