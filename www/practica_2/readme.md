@@ -58,3 +58,33 @@ Implemente unha función chamada bisesto que determine se un ano é bisesto. Lem
 ## Exercicio 5 - Listado de anos bisiestos
 
 Implementa a función para devolver un array co listado de anos bisiestos a partires da función implementada no exercio anterior. Emprega o código proporcionado para este exercicio. A función nova a implementar toma dous anos como entrada ( ano de inicio e ano de fin) e devolve un array con todos os anos bisiestos nese intervalo.
+
+## Exercicio 6 - Múltiplos común.
+
+Nesta tarefa tes que desenvolver unha páxina web que calcule e mostre por consola os múltiplos comúns de 45, 60 e 70 que están comprendidos entre 50,000 e 55,000.
+
+Requisitos:
+
+Cálculo de múltiplos comúns:
+
+1. O programa debe calcular o Mínimo Común Múltiplo (MCM) de 45, 60 e 70.
+2. Co MCM resultante, debe buscar os números comprendidos entre 50,000 e 55,000 que sexan divisibles por ese MCM.
+3. Debe editar as seguintes funcións para o funcionamento do programa.
+
+~~~
+// Función para calcular o MCM (Mínimo Común Múltiplo)
+function calcularMCM(a, b) {
+    //TODO: A realizar polo alumno/a
+}
+
+// Función para buscar múltiplos comunes nun rango
+function buscarMultiplosComunes(mcm, inicio, fin) {
+    let resultado = [];
+    //TODO: A realizar polo alumno/a
+
+
+    return resultado;
+}
+~~~ 
+O pseudo código para calcular o MCM é o seguinte:  
+![Exercicio 6 foto](https://github.com/jsamperevazquez/JavaScript_ECLI/blob/main/www/media/exerc_6.png)
