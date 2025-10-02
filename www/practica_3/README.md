@@ -38,3 +38,8 @@ variables e os puntos acadados polo xogador. Para realizar esta tarefa parte do 
 </html>
 
 ~~~~
+
+## Exercicio área perímetro
+
+Solicita ao usuario o radio dunha circunferencia, deberás amosar na web a superficie da circunferencia e o
+perímetro.
