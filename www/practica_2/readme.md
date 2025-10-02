@@ -95,5 +95,17 @@ Itera sobre os valores no rango de inicio a fin.
 En cada iteración, comproba se i é divisible por mcm e, se é, engádeo á lista.
 Ao final, retorna a lista resultado.
 
+## Exercicio 7 - Matriz
+
+Para este exercicios terás que implementar un método que sume dous arrays bidimensionalidades, é dicir, a posición 0, 0 do array1 coa posición 0,0 do array2 e así sucesivamente. Para elo vaiseche facilitar as seguintes funcións:  
+
+• A función matrizAleatoria(n1,n2), que xera unha matriz aleatorio coas dimensións indicadas. Onde n1 e n2 son as dimensións da matriz.  
+• A función aleatorio(min,max), que xera un número aleatorio e emprégase na función matrizAleatoria. 
+• A función mostrarMatrizTabla que retorna un string co código html para para mostrar a matriz nunha táboa. Esta función tamén emprega outra chamada generateRow
+
+Pídese que codifiques a función summatrix(m1,m2) onde m1 e m2 son as matrices de entrada e returna a matriz co resultado da suma. Recorda que a matriz suma obtense sumando os elementos das matrices que ocupan a mesma posición.
 
 
+No código entregado mostrase como resultado un valor aleatorio o cal debes substituír polo resultado de realizar a suma coa función summatrix. Recorda que a función summatrix só será valida se admite matrices de calquera dimensión 2x3, 4x4, 20x20 ,...
+
+Entrega: O estudante deberá entregar un arquivo .html que, ao abrirse nun navegador, calcule os múltiplos comúns e os mostre dentro da páxina.
