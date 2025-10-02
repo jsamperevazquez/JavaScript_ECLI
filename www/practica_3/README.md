@@ -43,3 +43,9 @@ variables e os puntos acadados polo xogador. Para realizar esta tarefa parte do 
 
 Solicita ao usuario o radio dunha circunferencia, deberás amosar na web a superficie da circunferencia e o
 perímetro.
+
+## Celsius vs Kelvin
+
+Crea unha calculadora que converta os graos Celsius en graos Kelvin. Para facer esta conversión,
+simplemente suma 273,15 aos graos Celsius. Na páxina web, mostrarás primeiro o contido da variable en
+graos Celsius e, a continuación, o resultado en graos Kelvin
