@@ -103,8 +103,9 @@ Para este exercicios terás que implementar un método que sume dous arrays bidi
 • A función aleatorio(min,max), que xera un número aleatorio e emprégase na función matrizAleatoria. 
 • A función mostrarMatrizTabla que retorna un string co código html para para mostrar a matriz nunha táboa. Esta función tamén emprega outra chamada generateRow
 
-Pídese que codifiques a función summatrix(m1,m2) onde m1 e m2 son as matrices de entrada e returna a matriz co resultado da suma. Recorda que a matriz suma obtense sumando os elementos das matrices que ocupan a mesma posición.
+Pídese que codifiques a función summatrix(m1,m2) onde m1 e m2 son as matrices de entrada e returna a matriz co resultado da suma. Recorda que a matriz suma obtense sumando os elementos das matrices que ocupan a mesma posición.  
 
+![Imagen Matriz](https://github.com/jsamperevazquez/JavaScript_ECLI/blob/main/www/media/Matriz.png)
 
 No código entregado mostrase como resultado un valor aleatorio o cal debes substituír polo resultado de realizar a suma coa función summatrix. Recorda que a función summatrix só será valida se admite matrices de calquera dimensión 2x3, 4x4, 20x20 ,...
 
