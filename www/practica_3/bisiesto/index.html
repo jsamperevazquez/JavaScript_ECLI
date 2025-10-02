@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="gl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Determinar Ano Bisiesto</title>
+</head>
+<body>
+    <h1>Comprobar se un ano é bisiesto</h1>
+    <label for="yearInput">Introduce un ano:</label>
+    <input type="number" id="yearInput" placeholder="Exemplo: 2024">
+    <button onclick="bisiesto()">Comprobar</button>
+    <p id="result"></p>
+    <script>
+        function bisiesto() {
+            const anno = parseInt(document.getElementById("yearInput").value)
+            const bisiesto = ((anno % 4 == 0 && anno % 100 != 0) || anno % 400 == 0)
+            if(bisiesto){
+                document.getElementById("result").innerText = "O anno " + anno + " é bisiesto"
+            }else{
+                document.getElementById("result").innerText = "O anno " + anno + " non é bisiesto"
+            }
+        }
+    </script>
+</body>
+</html>
