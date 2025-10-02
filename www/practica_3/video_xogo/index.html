@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+
+<head></head>
+
+<body>
+    <script>
+        function preguntaNumero(pregunta) {
+            while (true) {
+                var valor = prompt(pregunta);
+                if (!isNaN(valor) && valor != '') {
+                    return parseInt(valor);
+                }
+            }
+        }
+        function principal() {
+            // Facemos una asignación múltiple co fín de obter os datos das variables necesarias para obter os puntos.
+            let [saidasPista, golpes, adiantamentos] = [preguntaNumero("Cantas saidas de pista??"), preguntaNumero("Cantos golpes con outros vehiculos??"), preguntaNumero("Cantos adiantamentos??")]
+            let puntos = (100 - saidasPista) / golpes * adiantamentos
+            alert(puntos);
+        }
+
+        principal();
+    </script>
+</body>
+
+</html>
