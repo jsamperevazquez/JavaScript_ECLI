@@ -49,3 +49,38 @@ perímetro.
 Crea unha calculadora que converta os graos Celsius en graos Kelvin. Para facer esta conversión,
 simplemente suma 273,15 aos graos Celsius. Na páxina web, mostrarás primeiro o contido da variable en
 graos Celsius e, a continuación, o resultado en graos Kelvin
+
+
+## Bisiesto
+
+Exercicio e : bisiesto
+Escribe un programa que determine se un ano é bisiesto, necesitas solicitar ao usuario que introduza un
+ano e logo comprobar se cumpre certas condicións que o definan como bisiesto. Un ano considérase
+bisiesto se cumpre as seguintes regras:
+- Debe ser múltiplo de 4. Isto significa que o ano debe poder dividirse por 4 sen deixar residuo.
+- Non debe ser múltiplo de 100, agás que tamén sexa múltiplo de 400.
+
+~~~~
+
+<!DOCTYPE html>
+<html lang="gl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Determinar Ano Bisiesto</title>
+</head>
+<body>
+    <h1>Comprobar se un ano é bisiesto</h1>
+    <label for="yearInput">Introduce un ano:</label>
+    <input type="number" id="yearInput" placeholder="Exemplo: 2024">
+    <button onclick="bisiesto()">Comprobar</button>
+    <p id="result"></p>
+    <script>
+        function bisiesto() {
+            //TODO; tes que realizar esta función
+            }
+    </script>
+</body>
+</html>
+
+~~~~
