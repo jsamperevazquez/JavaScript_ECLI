@@ -32,11 +32,11 @@ function generarMatriz(n1, n2) {
  * @param {[number]} m2  Matriz aleatoria
  * @returns {[number]} Matriz suma da m1 + m2
  */
-function sumMatrix(m1, m2){
+function sumMatrix(m1, m2) {
     let sumaMatrix = []
-    for (let i = 0; i < m1.length; i ++){
+    for (let i = 0; i < m1.length; i++) {
         let fila = []
-        for(let j = 0; j < m2.length; j ++){
+        for (let j = 0; j < m2.length; j++) {
             fila.push(m1[i][j] + m2[i][j])
         }
         sumaMatrix.push(fila)
@@ -49,17 +49,34 @@ function sumMatrix(m1, m2){
 function mostrarMatrizTabla() {
     let fila = 3 // Número de filas que queremos na matriz 
     let columna = 3 // Número de columnas que queremos na matriz
-    let tabla = '<table>' // Creo a etiqueta HTML da tabla
+    let tablaSuma = '<table>' // Creo a etiqueta HTML da tabla
+    let tablaMatriz_1 = '<table>'
+    let tablaMatriz_2 = '<table>'
     const MATRIZ_1 = generarMatriz(fila, columna)
     const MATRIZ_2 = generarMatriz(fila, columna)
     const MATRIZ_SUM = sumMatrix(MATRIZ_1, MATRIZ_2)
+  
     for (let i = 0; i < fila; i++) {
-        tabla += '<tr>'
+        tablaMatriz_1 += '<tr>',tablaMatriz_2 += '<tr>', tablaSuma += '<tr>' 
+        
         for (let j = 0; j < columna; j++) {
-            tabla += `<td>${MATRIZ_SUM[i][j]}</td>` // Interpolación para crear os valores das columnas
+            tablaMatriz_1 += `<td>${MATRIZ_1[i][j]}</td>` // Interpolación para crear os valores das columnas
+            tablaMatriz_2 += `<td>${MATRIZ_2[i][j]}</td>` 
+            tablaSuma += `<td>${MATRIZ_SUM[i][j]}</td>` 
         }
-        tabla += '</tr>'
+        tablaMatriz_1 += '</tr>', tablaMatriz_2 += '</tr>', tablaSuma += '</tr>'
+        
     }
-    tabla += '</table>'
-    document.getElementById("resultado").innerHTML = tabla
+    tablaMatriz_1 += '</table>', tablaMatriz_2 += '</table>', tablaSuma += '</table>'
+    
+    
+        document.getElementById("matrices").innerHTML = `
+  <div style="display: flex; align-items: center; gap: 20px; justify-content: center;">
+    ${tablaMatriz_1}
+    <div style="font-size: 24px; font-weight: bold;">+</div>
+    ${tablaMatriz_2}
+    <div style="font-size: 24px; font-weight: bold;">=</div>
+    ${tablaSuma}
+  </div>
+`
 }
