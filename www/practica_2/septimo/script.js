@@ -34,9 +34,12 @@ function generarMatriz(n1, n2) {
  */
 function sumMatrix(m1, m2) {
     let sumaMatrix = []
+    if (m1.length != m2.length || m1[0].length != m2[0].length){
+        throw new Error(alert("Non se puede sumar matrices de diferente dimensión")) //Control de mesmas dimensións de matrices
+    }
     for (let i = 0; i < m1.length; i++) {
         let fila = []
-        for (let j = 0; j < m2.length; j++) {
+        for (let j = 0; j < m1.length; j++) {
             fila.push(m1[i][j] + m2[i][j])
         }
         sumaMatrix.push(fila)
@@ -48,7 +51,9 @@ function sumMatrix(m1, m2) {
  */
 function mostrarMatrizTabla() {
     let fila = 3 // Número de filas que queremos na matriz 
-    let columna = 3 // Número de columnas que queremos na matriz
+    let columna = 2 // Número de columnas que queremos na matriz
+    // let fila_2 = 3 // Si desexamos comprobar o control de dimensións
+    // let columna_2 = 3;
     let tablaSuma = '<table>' // Creo a etiqueta HTML da tabla
     let tablaMatriz_1 = '<table>'
     let tablaMatriz_2 = '<table>'
