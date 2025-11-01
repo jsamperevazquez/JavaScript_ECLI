@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="gl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Explorando os obxectos de Window</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+            background-color: black;
+            color: white;
+        }
+
+        button {
+            margin-top: 10px;
+            border-radius: 2vh;
+            background-color: aquamarine;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Práctica con obxectos que dependen de Window</h1>
+    <!-- O alumnado debe observar e imprimir na páxina a información do
+obxecto navigator -->
+    <h2>Información do Navegador (navigator)</h2>
+    <p><b>Nome do navegador:</b> <span id="appName"></span></p>
+    <p><b>Versión do navegador:</b> <span id="appVersion"></span></p>
+    <p><b>Idioma configurado:</b> <span id="language"></span></p>
+    <p><b>Plataforma do dispositivo:</b> <span id="platform"></span></p>
+    <!-- O alumnado debe obter e mostrar a resolución da pantalla do
+usuario a través do obxecto screen -->
+    <h2>Resolución de pantalla (screen)</h2>
+    <p><b>Anchura da pantalla:</b> <span id="screenWidth"></span></p>
+    <p><b>Altura da pantalla:</b> <span id="screenHeight"></span></p>
+    <!-- O alumnado debe traballar co obxecto location e realizar accións
+como actualizar a páxina e redirixir a outra URL -->
+    <h2>Localización (location)</h2>
+    <p><b>URL actual:</b> <span id="currentUrl"></span></p>
+    <!-- Botón para actualizar a páxina -->
+    <button onclick="actualizarPaxina()">Actualizar a páxina</button>
+    <!-- Botón para ir a Google -->
+    <button onclick="irAGoogle()">Ir a Google</button>
+    <!-- O alumnado traballará co obxecto history, navegando entre páxinas
+anteriores e posteriores no historial do navegador -->
+    <h2>Historial do navegador (history)</h2>
+    <!-- Botón para ir atrás no historial -->
+    <button onclick="irAtras()">Ir atrás no historial</button>
+    <!-- Botón para ir adiante no historial -->
+    <button onclick="irAdiante()">Ir adiante no historial</button>
+    <script src="script.js">
+        // TODO: O alumnado debe usar o obxecto navigator para obter e mostrar na páxina:
+        // 1. navigator.appName
+        // 2. navigator.appVersion
+        // 3. navigator.language
+        // 4. navigator.platform
+        // TODO: O alumnado debe usar o obxecto screen para obter e mostrar na páxina:
+        // 1. screen.width
+        // 2. screen.height
+        // TODO: O alumnado debe implementar as funcións para o obxecto location:
+        // - actualizarPaxina: Usar location.reload() para recargar a páxina actual.
+        // ir a Google.
+        // - irAGoogle: Usar location.assign("https://www.google.com") para
+        // TODO: O alumnado debe implementar as funcións para o obxecto history: (fixate no html como se chaman)
+        // - irAtras: Usar history.back() para ir á páxina anterior no historial. historial.
+    </script>
+</body>
+
+</html>
