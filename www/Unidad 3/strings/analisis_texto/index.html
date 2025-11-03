@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="gl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Análise de Texto en JavaScript</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 20px;
+        }
+
+        h1 {
+            color: #333;
+        }
+
+        label,
+        p {
+            margin-top: 10px;
+        }
+
+        input,
+        textarea,
+        button {
+            padding: 10px;
+            margin-top: 10px;
+            width: 100%;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Análise e Transformación dun Texto</h1>
+    <label for="texto">Introduce un texto:</label>
+    <textarea id="texto" rows="8" placeholder="Escribe aquí o teu
+texto..."></textarea>
+    <button id="analisarTexto">Analisar Texto</button>
+    <h2>Resultados:</h2>
+    <p id="contarPalabras"></p>
+    <p id="palabraMaisLonga"></p>
+    <p id="textoInvertido"></p>
+    <p id="eliminarVogais"></p>
+    <script src="script.js"></script>
+</body>
+
+</html>
