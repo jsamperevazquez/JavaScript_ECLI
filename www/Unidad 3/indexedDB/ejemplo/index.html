@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="gl">
+<head>
+    <meta charset="UTF-8">
+    <title>Lista de Tarefas con IndexedDB</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+
+        #taskForm {
+            margin-bottom: 20px;
+        }
+
+        #tasksList {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .task-item {
+            padding: 10px;
+            border: 1px solid #ccc;
+            margin-bottom: 5px;
+        }
+    </style>
+</head>
+<body>
+<h1>Lista de Tarefas</h1>
+<form id="taskForm">
+    <input type="text" id="taskInput" placeholder="Nova tarefa" required>
+    <button type="submit">Engadir</button>
+</form>
+<ul id="tasksList"></ul>
+<script src="script.js"></script>
+</body>
+</html>
