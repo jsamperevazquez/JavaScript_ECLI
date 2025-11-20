@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="gl">
+<head>
+    <meta charset="UTF-8">
+    <title>Xestión de Clientes - App Móbil</title>
+
+    <!-- ICONOS BONITOS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+    <style>
+        /* --- ESTILO GENERAL --- */
+        body {
+            font-family: "Segoe UI", Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: #f2f4f7;
+        }
+
+        h1 {
+            text-align: center;
+            padding: 20px 0;
+            background: #2a6df4;
+            color: white;
+            margin: 0;
+            font-size: 22px;
+        }
+
+        /* --- CONTENEDOR APP --- */
+        .app-container {
+            max-width: 480px;   /* simula tamaño app móvil */
+            margin: auto;
+            padding: 20px;
+        }
+
+        /* --- FORMULARIO --- */
+        form {
+            background: white;
+            padding: 15px;
+            border-radius: 12px;
+            box-shadow: 0 3px 6px rgba(0,0,0,0.1);
+            margin-bottom: 20px;
+        }
+
+        form input {
+            width: 100%;
+            margin-bottom: 12px;
+            padding: 12px;
+            border-radius: 8px;
+            border: 1px solid #ccc;
+            font-size: 16px;
+            box-sizing: border-box;
+        }
+
+        /* --- BOTÓN PRINCIPAL --- */
+        #btnGardar {
+            width: 100%;
+            padding: 14px;
+            background: #2a6df4;
+            color: white;
+            font-size: 18px;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: 0.2s;
+        }
+
+        #btnGardar:hover {
+            background: #1f55c7;
+        }
+
+        /* --- TARJETAS DE CLIENTES --- */
+        .cliente-card {
+            background: white;
+            padding: 15px;
+            border-radius: 12px;
+            margin-bottom: 10px;
+            box-shadow: 0 3px 6px rgba(0,0,0,0.08);
+        }
+
+        .cliente-info {
+            margin-bottom: 10px;
+            font-size: 15px;
+        }
+
+        .cliente-info span {
+            font-weight: bold;
+        }
+
+        /* --- ACCIONES --- */
+        .acciones {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .btn {
+            border: none;
+            padding: 10px 12px;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 16px;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .btn-editar {
+            background: #ffc048;
+            color: #000;
+        }
+
+        .btn-eliminar {
+            background: #ff5e57;
+            color: white;
+        }
+
+        /* --- RESPONSIVE --- */
+        /* --- RESPONSIVE MÓVIL (480px) --- */
+        @media (max-width: 480px) {
+            h1 { font-size: 20px; }
+            form input { font-size: 14px; }
+            #btnGardar { font-size: 16px; }
+        }
+
+        /* --- RESPONSIVE TABLA (720px) --- */
+        @media (max-width: 720px) {
+
+            table, thead, tbody, th, td, tr {
+                display: block;
+            }
+
+            thead { display: none; }
+
+            tr {
+                margin-bottom: 15px;
+                background: white;
+                padding: 12px;
+                border-radius: 10px;
+                box-shadow: 0 1px 5px rgba(0,0,0,0.1);
+            }
+
+            td {
+                border: none;
+                padding: 8px 0;
+                display: flex;
+                justify-content: space-between;
+                font-size: 14px;
+            }
+
+            td::before {
+                content: attr(data-label);
+                font-weight: bold;
+                color: #555;
+            }
+        }
+
+    </style>
+</head>
+<body>
+
+<h1>Xestión de Clientes</h1>
+
+<div class="app-container">
+
+    <!-- FORMULARIO -->
+    <form id="clienteForm">
+        <input type="text" id="nome" placeholder="Nome" required>
+        <input type="email" id="email" placeholder="Email" required>
+        <input type="number" id="telefono" placeholder="Teléfono" required>
+        <input type="number" id="idade" placeholder="Idade" required>
+
+        <button type="submit" id="btnGardar">
+            <i class="fa-solid fa-plus"></i> Engadir Cliente
+        </button>
+    </form>
+
+    <!-- LISTA DE CLIENTES -->
+    <div id="listaClientes"></div>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
