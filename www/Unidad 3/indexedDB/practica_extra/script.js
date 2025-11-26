@@ -43,10 +43,10 @@ request.onupgradeneeded = function (event) {
         autoIncrement: true
     });
 
-    objectStore.createIndex('nome', 'nome', { unique: false });
-    objectStore.createIndex('email', 'email', { unique: true });
-    objectStore.createIndex('telefono', 'telefono', { unique: false });
-    objectStore.createIndex('idade', 'idade', { unique: false });
+    objectStore.createIndex('nome', 'nome', {unique: false});
+    objectStore.createIndex('email', 'email', {unique: true});
+    objectStore.createIndex('telefono', 'telefono', {unique: false});
+    objectStore.createIndex('idade', 'idade', {unique: false});
 };
 
 /**
@@ -147,10 +147,58 @@ function editarCliente(idCliente) {
     const request = objectStore.get(idCliente);
 
     request.onsuccess = function (event) {
+        document.getElementById('clienteForm').hidden = true;
         const cliente = event.target.result;
-
-        // (Formulario dinámico — descripción resumida)
-        // ...
+        const formMod = document.createElement('form');
+        formMod.id = 'formMod';
+        const inputNome = document.createElement('input');
+        inputNome.id = 'actNome';
+        const inputEmail = document.createElement('input');
+        inputEmail.id = 'actEmail';
+        const inputTelefono = document.createElement('input');
+        inputTelefono.id = 'actTelefono';
+        const inputIdade = document.createElement('input');
+        inputIdade.id = 'actIdade';
+        const botonActualizar = document.createElement('button');
+        botonActualizar.type = 'submit';
+        botonActualizar.className = 'fa-solid fa-plus';
+        botonActualizar.id = 'editar';
+        botonActualizar.textContent = 'Actualizar';
+        formMod.appendChild(inputNome);
+        formMod.appendChild(inputEmail);
+        formMod.appendChild(inputTelefono);
+        formMod.appendChild(inputIdade);
+        formMod.appendChild(botonActualizar);
+        inputNome.value = cliente.nome;
+        inputEmail.value = cliente.email;
+        inputTelefono.value = cliente.telefono;
+        inputIdade.value = cliente.idade;
+        document.querySelector('.app-container').appendChild(formMod);
+        // Scroll instantáneo al final
+        window.scrollTo(0, document.body.scrollHeight);
+        document.getElementById('formMod').addEventListener(
+            'submit', e => {
+                e.preventDefault();
+                const novoCliente = {
+                    id: cliente.id,
+                    nome: inputNome.value,
+                    email: inputEmail.value,
+                    telefono: inputTelefono.value,
+                    idade: inputIdade.value
+                }
+                const transaction = db.transaction(["clientes"], "readwrite");
+                const obj = transaction.objectStore('clientes');
+                const request = obj.put(novoCliente);
+                request.onsuccess = function (event) {
+                    console.log( `Cliente ${novoCliente.nome}actualizado correctamente`);
+                    document.getElementById('clienteForm').hidden = false;
+                    formMod.remove();
+                    mostrarClientes();
+                }
+                request.onerror = function (event) {
+                    console.error('Erro ao enviar o cliente', event.target.error);
+                }
+            });
     };
 }
 
