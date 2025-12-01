@@ -8,7 +8,7 @@ let db;
  * Solicitude para abrir ou crear a base de datos "TendaDB".
  * @type {IDBOpenDBRequest}
  */
-const request = indexedDB.open("TendaDB", 1);
+const request = indexedDB.open("TendaDB", 3);
 
 /**
  * Manexa os erros ao intentar abrir a base de datos.
