@@ -58,8 +58,29 @@ request.onsuccess = function (event) {
     mostrarClientes();
 };
 
+// Xestión do formulario de creación de clientes
+document.getElementById('clienteForm').addEventListener('submit', function (event) {
+ event.preventDefault();
+ const nome = document.getElementById('nome').value;
+ const email = document.getElementById('email').value;
+ const telefono = parseInt(document.getElementById('telefono').value);
+ const idade = parseInt(document.getElementById('idade').value);
+ 
+ const novoCliente = {
+ nome, email, telefono, idade
+ };
+ 
+ 
+ engadirCliente(novoCliente);
+ 
+ // Reseteo o formulario despois de crear o cliente
+ document.getElementById('clienteForm').reset();
+ 
+ })
+
+
 /**
- * Añade un novo cliente al ObjectStore "clientes".
+ * Engade un novo cliente ao ObjectStore "clientes".
  * @param {{nome: string, email: string, telefono: number, idade: number}} cliente
  */
 function engadirCliente(cliente) {
@@ -233,4 +254,3 @@ function confirmarAccion(tipo, idCliente) {
         if (confirm("Seguro que desexas modificar este cliente?")) editarCliente(idCliente);
     }
 }
-
