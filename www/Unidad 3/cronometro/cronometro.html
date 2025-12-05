@@ -1,0 +1,193 @@
+<!doctype html>
+<html lang="gl">
+  <head>
+    <style>
+/* ====== RESET ====== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Orbitron", "Segoe UI", sans-serif;
+}
+
+body {
+  background: radial-gradient(circle at center, #0a0a0a, #000000 70%);
+  color: #00eaff;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+/* ====== CONTENEDOR PRINCIPAL ====== */
+main {
+  width: 100%;
+  max-width: 450px;
+  padding: 40px;
+  border-radius: 18px;
+  background: rgba(0, 0, 0, 0.6);
+  box-shadow:
+    0 0 25px #00dfff,
+    inset 0 0 20px rgba(0, 217, 255, 0.4);
+  backdrop-filter: blur(8px);
+  text-align: center;
+  animation: fadeIn 1s ease-out;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: scale(0.95); }
+  to   { opacity: 1; transform: scale(1); }
+}
+
+/* ====== TÍTULO ====== */
+h1 {
+  font-size: 2rem;
+  margin-bottom: 25px;
+  color: #00eaff;
+  text-shadow:
+    0 0 8px #00eaff,
+    0 0 20px #00eaff;
+}
+
+/* ====== CONFIG ====== */
+.config label {
+  font-size: 1.1rem;
+  margin-bottom: 8px;
+  display: block;
+  text-shadow: 0 0 8px #00eaff;
+}
+
+.config input {
+  width: 100%;
+  padding: 12px;
+  border-radius: 8px;
+  border: 2px solid #00eaff;
+  background: rgba(0,0,0,0.7);
+  color: #00eaff;
+  font-size: 1.2rem;
+  text-align: center;
+  outline: none;
+  box-shadow: 0 0 12px #00eaff;
+}
+
+.config input:focus {
+  border-color: #ff00f6;
+  box-shadow: 0 0 15px #ff00f6;
+}
+
+/* ====== ESTADO ====== */
+.tempo {
+  margin: 25px 0 10px;
+  font-size: 3rem;
+  font-weight: bold;
+  letter-spacing: 3px;
+  color: #00ffb3;
+  text-shadow:
+    0 0 8px #00ffb3,
+    0 0 20px #00ffb3;
+}
+
+.mensaxes {
+  height: 30px;
+  margin-top: 15px;
+  color: #ff00f6;
+  font-size: 1.2rem;
+  text-shadow:
+    0 0 8px #ff00f6,
+    0 0 15px #ff00f6;
+}
+
+/* ====== BOTONES ====== */
+.controles {
+  margin-top: 30px;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+button {
+  padding: 12px 28px;
+  font-size: 1.2rem;
+  font-weight: bold;
+  border: 2px solid #00eaff;
+  border-radius: 10px;
+  background: #000;
+  color: #00eaff;
+  cursor: pointer;
+  text-transform: uppercase;
+  transition: 0.2s;
+  box-shadow:
+    0 0 10px #00eaff,
+    inset 0 0 10px rgba(0, 234, 255, 0.3);
+}
+
+button:hover {
+  transform: translateY(-3px);
+  box-shadow:
+    0 0 18px #00eaff,
+    inset 0 0 12px rgba(0, 234, 255, 0.5);
+}
+
+button:active {
+  transform: scale(0.95);
+}
+
+/* Botón Stop */
+#btnStop {
+  border-color: #ff0044;
+  color: #ff0044;
+  box-shadow:
+    0 0 10px #ff0044,
+    inset 0 0 10px rgba(255, 0, 68, 0.3);
+}
+
+#btnStop:hover {
+  box-shadow:
+    0 0 18px #ff0044,
+    inset 0 0 12px rgba(255, 0, 68, 0.5);
+}
+
+/* ====== ALERTA FINAL ====== */
+.alerta {
+  animation: alertaNeon 0.7s infinite;
+}
+
+@keyframes alertaNeon {
+  0%   { color: #ffea00; text-shadow: 0 0 10px #ffea00; }
+  50%  { color: #ff0051; text-shadow: 0 0 20px #ff0051; }
+  100% { color: #ffea00; text-shadow: 0 0 10px #ffea00; }
+}
+
+
+
+    </style>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Cronómetro de conta atrás</title>
+    <link rel="stylesheet" href="cronometro.css" />
+  </head>
+  <body>
+    <main>
+      <h1>Cronómetro de conta atrás</h1>
+
+      <section class="config">
+        <label for="segundos">Duración (segundos)</label>
+        <input id="segundos" type="number" value="10" />
+      </section>
+
+      <section aria-labelledby="estadoLabel">
+        <h2 id="estadoLabel">Estado</h2>
+        <div class="tempo">Tempo: <span id="tempo">00:00</span></div>
+        <div id="mensaxes" aria-live="polite" role="status" class="mensaxes"></div>
+      </section>
+
+      <section class="controles">
+        <button id="btnStart">Iniciar</button>
+        <button id="btnStop">Parar</button>
+      </section>
+    </main>
+
+    <script src="cronometro.js" defer></script>
+  </body>
+</html>
